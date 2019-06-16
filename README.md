@@ -13,6 +13,26 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
+GWAS	Reference
+   -Attention deficit/hyperactivity disorder (ADHD)*Demontis, D. et al. Discovery of the first genome-wide significant risk       loci for attention deficit/hyperactivity disorder. Nat. Genet. 51, 63–75 (2019)*	
+
+   -Autism spectrum disorder (ASD)	
+
+   -Bipolar disorder (BD)	
+
+   -Schizophrenia (SCZ)	
+
+   -Major depressive disorder (MDD)	
+
+   -Alzheimer’s disease (AD)	
+
+   -Parkinson’s disease (PD)	
+
+   -Multiple sclerosis (MS)	
+
+   -Amyotrophic lateral sclerosis (ALS)	
+
+
 
 ## H_MAGMA_output.xlsx 
 Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Output.xlsx
