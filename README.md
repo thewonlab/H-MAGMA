@@ -44,7 +44,7 @@ Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Ou
    - library(gplots)
      -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
      - outputdir=<output directory> : output file name and directory
-     - alternative="enrichment" : 
+     - alternative="enrichment" : One sided test 
      - BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
