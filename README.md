@@ -15,7 +15,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 ## GWAS summary statistics
 
 ## H_MAGMA_output.xlsx 
-* Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Output.xlsx
+Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Output.xlsx
 
 ## RRHO.R
 * This file is to XXX
