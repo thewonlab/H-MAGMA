@@ -13,7 +13,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
-*GWAS	Reference
+* GWAS	Reference
   -Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444	
 
   -Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
