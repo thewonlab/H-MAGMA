@@ -38,7 +38,14 @@ Nancy Sey and Hyejung Won, 06/14/2019
 Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Output.xlsx
 
 ## RRHO.R
-* This file is to XXX
+* This file is to identify gene-level overlap between two disorders using Z-scores from H-MAGMA outputs.
+   - install.packages("gplots")
+   - library(RRHO)
+   - library(gplots)
+     -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
+     - outputdir=<output directory> : output file name and directory
+     - alternative="enrichment" : 
+     - BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
 
