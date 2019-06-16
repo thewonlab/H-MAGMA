@@ -14,23 +14,23 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 ## GWAS summary statistics
 GWAS	Reference
-   -Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444	
+-Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444	
 
-   -Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
+-Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
 
-   -Bipolar disorder (BD): Stahl, E. et al.(2018)bioRxiv 173062 (2018). doi:10.1101/173062
+-Bipolar disorder (BD): Stahl, E. et al.(2018)bioRxiv 173062 (2018). doi:10.1101/173062
 
-   -Schizophrenia (SCZ):Pardiñas, A. F. et al.(2018) PMID: 29483656 
+-Schizophrenia (SCZ):Pardiñas, A. F. et al.(2018) PMID: 29483656 
 
-   -Major depressive disorder (MDD): Howard, D. M. et al.(2019) PMID: 30718901 
+-Major depressive disorder (MDD): Howard, D. M. et al.(2019) PMID: 30718901 
 
-   -Alzheimer’s disease (AD): Jansen, I. E. et al.(2019) PMID: 30617256
+-Alzheimer’s disease (AD): Jansen, I. E. et al.(2019) PMID: 30617256
 
-   -Parkinson’s disease (PD): Nalls, M. A. et al.(2019) bioRxiv 388165 (2019). doi:10.1101/388165
+-Parkinson’s disease (PD): Nalls, M. A. et al.(2019) bioRxiv 388165 (2019). doi:10.1101/388165
 
-   -Multiple sclerosis (MS): Andlauer, T. F. M. et al.(2016) PMID: 27386562
+-Multiple sclerosis (MS): Andlauer, T. F. M. et al.(2016) PMID: 27386562
 
-   -Amyotrophic lateral sclerosis (ALS): van Rheenen, W. et al.(2016) PMID: 27455348	
+-Amyotrophic lateral sclerosis (ALS): van Rheenen, W. et al.(2016) PMID: 27455348	
 
 
 
