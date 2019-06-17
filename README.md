@@ -13,7 +13,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
-* GWAS	Reference
+* GWAS Reference
    - Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444	
 
    - Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
@@ -48,7 +48,14 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    -  BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
-
+* This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes between each comparison. 
+   - options(stringsAsFactors=F)
+   - library(gProfileR)
+   - library(ggplot2)
+   - library(GenomicRanges)
+   - library(data.table)
+   - library(stringr)
+   - load<>
 
 ## Reference
 Please cite this paper: Sey et al., 2019 bioRxiv (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
