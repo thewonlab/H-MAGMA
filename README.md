@@ -2,14 +2,14 @@
 Nancy Sey and Hyejung Won, 06/14/2019
 
 ## H_MAGMA.sh
-* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes.Follow the detailed script below to run H-MAGMA
+* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA
    - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA v1.07b (https://ctg.cncr.nl/software/magma)]
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot FB.genes.annot: Hi-C based gene-SNP pairs in the fetal brain (provided in this repository as    FB_wointron.genes.annot.csv.zip).
-   - --gene-annot AB.genes.annot: Hi-C based gene-SNP pairs in the adult brain (provided in this repository as AB_wointron.genes.annot.csv.zip).
+   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository as    FB.genes.annot.gz).
+   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as AB.genes.annot.gz).
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
@@ -18,15 +18,15 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
    - Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
 
-   - Bipolar disorder (BD): Stahl, E. et al.(2018)bioRxiv 173062 (2018). doi:10.1101/173062
+   - Bipolar disorder (BD): Stahl, E. et al.(2018) bioRxiv 173062 doi:10.1101/173062
 
-   - Schizophrenia (SCZ):Pardiñas, A. F. et al.(2018) PMID: 29483656 
+   - Schizophrenia (SCZ): Pardiñas, A. F. et al.(2018) PMID: 29483656 
 
    - Major depressive disorder (MDD): Howard, D. M. et al.(2019) PMID: 30718901 
 
    - Alzheimer’s disease (AD): Jansen, I. E. et al.(2019) PMID: 30617256
  
-   - Parkinson’s disease (PD): Nalls, M. A. et al.(2019) bioRxiv 388165 (2019). doi:10.1101/388165
+   - Parkinson’s disease (PD): Nalls, M. A. et al.(2019) bioRxiv 388165 doi:10.1101/388165
 
    - Multiple sclerosis (MS): Andlauer, T. F. M. et al.(2016) PMID: 27386562
 
@@ -36,12 +36,10 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 ## H_MAGMA_output.xlsx 
 Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H_MAGMA_Output.xlsx
+*All Supplementary Table 1 should be uploaded here and place the legend*
 
 ## RRHO.R
-* This file is to identify gene-level overlap between two disorders using Z-scores from H-MAGMA outputs.
-   - install.packages("gplots")
-   - library(RRHO)
-   - library(gplots)
+* This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs.
    -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
    -  outputdir= <output directory> : Output file name and directory
    - alternative="enrichment" : One sided test 
@@ -68,12 +66,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
         print(paste(sharedlist[i],sharedlist[j]))
     } : Comparing csv files from sharedlist to generate pleiotropic/shared genes
    - length(sharedgene): Checking the length of shared genes
-   - goresult = gprofiler(sharedgene, organism="hsapiens", ordered_query=F, significant=T, 
-                     max_p_value=0.05, min_set_size=15, max_set_size=600,
-                     min_isect_size=5, correction_method="fdr",custom_bg=rownames(dismat),
-                     hier_filtering="strong",  include_graph=T, src_filter="GO") : Running GeneOntology for pleiotropic genes
-    - save(goresult, file=paste0(outputdir, "GO_pleiotropy_genes.rda")): Saving GeneOntology output for pleiotropic genes 
-
+   
    
 
 ## Reference
