@@ -55,7 +55,20 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    - library(GenomicRanges)
    - library(data.table)
    - library(stringr)
-   - load<>
+   - load<* gene annotation for all genes *>
+   - celltype = : Specify celltype to be used. "FB" or "AB"
+   - outputdir = <output directory> : output file name and directory
+   -  sharedlist = c(<>) : Input all shared files of most upregulated genes as a csv.
+   - sharedgene = c(): creating shared genes
+   -  for (i in 1:(length(sharedlist)-1)){
+          for (j in (i+1):length(sharedlist)){
+        dis1 = unlist(read.csv(sharedlist[i], header=F))
+        dis2 = unlist(read.csv(sharedlist[j], header=F))
+        sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
+        print(paste(sharedlist[i],sharedlist[j]))
+    }
+   - length(sharedgene): checking the length of shared genes
+   
 
 ## Reference
 Please cite this paper: Sey et al., 2019 bioRxiv (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
