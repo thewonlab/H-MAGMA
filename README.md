@@ -2,7 +2,7 @@
 Nancy Sey and Hyejung Won, 06/14/2019
 
 ## H_MAGMA.sh
-* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes
+* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes.Follow the detailed script below to run H-MAGMA
    - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA (https://ctg.cncr.nl/software/magma)]
    - --bfiile g1000_eur: Reference file for European population, downloaded from XXX 
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
@@ -35,17 +35,17 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## H_MAGMA_output.xlsx 
-Example Output file from H_MAGMA.sh is provided in this repository as H_MAGMA_Output.xlsx
+Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H_MAGMA_Output.xlsx
 
 ## RRHO.R
 * This file is to identify gene-level overlap between two disorders using Z-scores from H-MAGMA outputs.
    - install.packages("gplots")
    - library(RRHO)
    - library(gplots)
-     -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
-     - outputdir=<output directory> : output file name and directory
-     - alternative="enrichment" : One sided test 
-     - BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
+   -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
+   -  outputdir= <output directory> : output file name and directory
+   - alternative="enrichment" : One sided test 
+   -  BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
 
