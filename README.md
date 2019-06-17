@@ -55,7 +55,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    - library(GenomicRanges)
    - library(data.table)
    - library(stringr)
-   - load<* gene annotation for all genes *>
+   - load (< * gene annotation for all genes * >)
    - celltype = : Specify celltype to be used. "FB" or "AB"
    - outputdir = <output directory> : Output file name and directory
    -  sharedlist = c(<>) : Input all shared files of most upregulated genes as a csv.
