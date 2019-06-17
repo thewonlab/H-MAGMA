@@ -72,6 +72,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
                      max_p_value=0.05, min_set_size=15, max_set_size=600,
                      min_isect_size=5, correction_method="fdr",custom_bg=rownames(dismat),
                      hier_filtering="strong",  include_graph=T, src_filter="GO") : Running GeneOntology for pleiotropic genes
+    - save(goresult, file=paste0(outputdir, "GO_pleiotropy_genes.rda")): Saving GeneOntology output for pleiotropic genes 
 
    
 
