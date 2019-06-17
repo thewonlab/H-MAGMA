@@ -35,6 +35,8 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## H_MAGMA_output.xlsx 
+Output files for Neuropsychiatric disorders (ADHD,ASD,BD,SCZ,MDD) and Neurodegenerative (AD,MS,PD,ALS) H-MAGMA are provided in this repository. 
+
 Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H_MAGMA_Output.xlsx
 *All Supplementary Table 1 should be uploaded here and place the legend*
 
