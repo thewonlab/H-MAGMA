@@ -58,7 +58,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    - load (<gene_Anno_allgenes.csv>): Gene annotations for all genes (provided in this repository as        gene_Anno_allgenes.csv)
    - celltype = : Specify celltype to be used. "FB" or "AB"
    - outputdir = <output directory> : Output file name and directory
-   -  sharedlist = c(<>) : Input all shared files of most upregulated genes as a csv.
+   -  sharedlist = c(<>) : Input all shared files from RRHO most upregulated genes as a csv file.
    - sharedgene = c(): Creating shared genes
    -  for (i in 1:(length(sharedlist)-1)){
           for (j in (i+1):length(sharedlist)){
@@ -66,7 +66,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
         dis2 = unlist(read.csv(sharedlist[j], header=F))
         sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
         print(paste(sharedlist[i],sharedlist[j]))
-    } : Comparing csv files to generate pleiotropic/shared genes
+    } : Comparing csv files from sharedlist to generate pleiotropic/shared genes
    - length(sharedgene): Checking the length of shared genes
    - goresult = gprofiler(sharedgene, organism="hsapiens", ordered_query=F, significant=T, 
                      max_p_value=0.05, min_set_size=15, max_set_size=600,
