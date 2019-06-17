@@ -66,7 +66,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
         dis2 = unlist(read.csv(sharedlist[j], header=F))
         sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
         print(paste(sharedlist[i],sharedlist[j]))
-    }
+    } : comparing csv files to generate pleiotropic/shared genes
    - length(sharedgene): checking the length of shared genes
    
 
