@@ -3,7 +3,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes.Follow the detailed script below to run H-MAGMA
-   - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA (https://ctg.cncr.nl/software/magma)]
+   - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA v1.07b (https://ctg.cncr.nl/software/magma)]
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
