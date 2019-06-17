@@ -43,7 +43,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    - library(RRHO)
    - library(gplots)
    -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
-   -  outputdir= <output directory> : output file name and directory
+   -  outputdir= <output directory> : Output file name and directory
    - alternative="enrichment" : One sided test 
    -  BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
@@ -57,17 +57,22 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    - library(stringr)
    - load<* gene annotation for all genes *>
    - celltype = : Specify celltype to be used. "FB" or "AB"
-   - outputdir = <output directory> : output file name and directory
+   - outputdir = <output directory> : Output file name and directory
    -  sharedlist = c(<>) : Input all shared files of most upregulated genes as a csv.
-   - sharedgene = c(): creating shared genes
+   - sharedgene = c(): Creating shared genes
    -  for (i in 1:(length(sharedlist)-1)){
           for (j in (i+1):length(sharedlist)){
         dis1 = unlist(read.csv(sharedlist[i], header=F))
         dis2 = unlist(read.csv(sharedlist[j], header=F))
         sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
         print(paste(sharedlist[i],sharedlist[j]))
-    } : comparing csv files to generate pleiotropic/shared genes
-   - length(sharedgene): checking the length of shared genes
+    } : Comparing csv files to generate pleiotropic/shared genes
+   - length(sharedgene): Checking the length of shared genes
+   - goresult = gprofiler(sharedgene, organism="hsapiens", ordered_query=F, significant=T, 
+                     max_p_value=0.05, min_set_size=15, max_set_size=600,
+                     min_isect_size=5, correction_method="fdr",custom_bg=rownames(dismat),
+                     hier_filtering="strong",  include_graph=T, src_filter="GO") : Running GeneOntology for pleiotropic genes
+
    
 
 ## Reference
