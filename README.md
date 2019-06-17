@@ -18,7 +18,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
    - Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
 
-   - Bipolar disorder (BD): Stahl, E. et al.(2018) bioRxiv 173062 doi:10.1101/173062
+   - Bipolar disorder (BD): Stahl, E. et al.(2018) PMID: 31043756
 
    - Schizophrenia (SCZ): Pardiñas, A. F. et al.(2018) PMID: 29483656 
 
