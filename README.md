@@ -48,7 +48,7 @@ Example Output file from H_MAGMA.sh for ADHD is provided in this repository as H
    -  BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
-* This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes between each comparison. 
+* This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes for each comparison. 
    - options(stringsAsFactors=F)
    - library(gProfileR)
    - library(ggplot2)
