@@ -67,7 +67,7 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD;ASD;BD;SCZ;MDD) and Neur
                "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
                "files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
                "files/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv"): Input all shared files from RRHO most upregulated genes as a csv file.
+               "files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv"): Input files from RRHO most upregulated genes 
                
    - sharedgene = c(): Creating shared genes
    -  for (i in 1:(length(sharedlist)-1)){
