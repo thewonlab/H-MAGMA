@@ -34,7 +34,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## H_MAGMA_output.xlsx 
-Output files from H_MAGMA.sh for Neuropsychiatric (ADHD;ASD;BD;SCZ;MDD) and Neurodegenerative (AD;MS;PD;ALS) disorders  are provided in this repository as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz; Neuropsyc_H_MAGMA_Output.FB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz
+Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and Neurodegenerative (AD; MS; PD; ALS) disorders  are provided in this repository as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz; Neuropsyc_H_MAGMA_Output.FB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz
 * MAGMA
    - GENE: Gene ID
    - CHR: Chromosomal location
