@@ -76,7 +76,7 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and 
         dis2 = unlist(read.csv(sharedlist[j], header=F))
         sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
         print(paste(sharedlist[i],sharedlist[j]))
-    } : Comparing csv files from sharedlist to generate pleiotropy genes
+    } : Comparing input files to generate pleiotropy genes
   - save(sharedlist, file="pleiotropygenes.rda") = Save pleiotropy genes
    
    
