@@ -1,15 +1,16 @@
 options(stringsAsFactors=F)
+setwd("~/files/")
 outputdir = "~/output/"
-sharedlist = c("files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
-               "files/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
-               "files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
-               "files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
-               "files/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv")
+sharedlist = c("RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
+               "RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
+               "RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv",
+               "RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
+               "RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
+               "RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
+               "RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
+               "RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
+               "RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
+               "RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv")
 sharedgene = c()
 
 for (i in 1:(length(sharedlist)-1)){
