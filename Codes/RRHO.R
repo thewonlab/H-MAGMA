@@ -7,4 +7,4 @@ ADHD_ordered= ADHD[order(ADHD$ZSTAT),] #H-MAGMA output for ADHD was ordered by Z
 ASD_ordered = ASD[order(ASD$ZSTAT),]  #ASD H-MAGMA output for ASD was ordred by Z-scores
 RRHO.example = RRHO(ADHD,ASD, outputdir= "~/output/", alternative="enrichment",labels=c("ADHD", "ASD"), BY=TRUE, log10.ind=TRUE, plot= TRUE)
   hypermat = apply(t(RRHO.example[[4]]),1,rev)
-  heatmap.2(hypermat, Rowv=FALSE, symm=TRUE, col=blue2green2red(maxnum), trace="none",  labCol=FALSE)
+  heatmap.2(hypermat, Rowv=FALSE, symm=TRUE, trace="none",  labCol=FALSE)
