@@ -58,11 +58,11 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and 
 ## Pleiotropic_genes.R
 * This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes for each comparison. 
    - outputdir = "~/output/"> : Output file name and directory
-   - sharedlist = c("~/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
-               "~/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
-               "~/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
-               "~/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
-               "~/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
+   - sharedlist = c("files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
+               "files/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
+               "files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
+               "files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
+               "files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
                "files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
                "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
                "files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
