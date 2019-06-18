@@ -57,16 +57,18 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD;ASD;BD;SCZ;MDD) and Neur
 
 ## Pleiotropic_genes.R
 * This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes for each comparison. 
-   - options(stringsAsFactors=F)
-   - library(gProfileR)
-   - library(ggplot2)
-   - library(GenomicRanges)
-   - library(data.table)
-   - library(stringr)
-   - load (<gene_Anno_allgenes.csv>): Gene annotations for all genes (provided in this repository as        gene_Anno_allgenes.csv)
-   - celltype = : Specify celltype to be used. "FB" or "AB"
-   - outputdir = <output directory> : Output file name and directory
-   -  sharedlist = c(<>) : Input all shared files from RRHO most upregulated genes as a csv file.
+   - outputdir = "~/output/"> : Output file name and directory
+   - sharedlist = c("files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
+               "files/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
+               "files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
+               "files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
+               "files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
+               "files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
+               "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
+               "files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
+               "files/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
+               "files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv"): Input all shared files from RRHO most upregulated genes as a csv file.
+               
    - sharedgene = c(): Creating shared genes
    -  for (i in 1:(length(sharedlist)-1)){
           for (j in (i+1):length(sharedlist)){
@@ -75,7 +77,7 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD;ASD;BD;SCZ;MDD) and Neur
         sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
         print(paste(sharedlist[i],sharedlist[j]))
     } : Comparing csv files from sharedlist to generate pleiotropic/shared genes
-   - length(sharedgene): Checking the length of shared genes
+  - save(sharedlist, file="pleiotropygenes.rda") = Save pleiotropy genes
    
    
 
