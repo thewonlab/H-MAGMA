@@ -18,7 +18,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
    - Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
 
-   - Bipolar disorder (BD): Stahl, E. et al.(2018) PMID: 31043756
+   - Bipolar disorder (BD): Stahl, E. et al.(2019) PMID: 31043756
 
    - Schizophrenia (SCZ): Pardiñas, A. F. et al.(2018) PMID: 29483656 
 
@@ -34,8 +34,9 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## H_MAGMA_output.xlsx 
-Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and Neurodegenerative (AD; MS; PD; ALS) disorders  are provided in this repository as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz; Neuropsyc_H_MAGMA_Output.FB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz; Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz
-* MAGMA
+* Output files from H_MAGMA.sh for Neuropsychiatric disorders(ADHD; ASD; BD; SCZ; MDD) are provided as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz and Neuropsyc_H_MAGMA_Output.FB.xlsx.gz based on adult brain Hi-C and fetal brain Hi-C, respectively.
+* Output files from H_MAGMA.sh for Neurodegenerative disorders (AD; MS; PD; ALS) are provided as Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz and Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz based on adult brain Hi-C and fetal brain Hi-C, respectively.
+* Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
    - START: Chromosomal start location of gene
@@ -43,44 +44,20 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and 
    - NSNPS: Number of SNPS annotated to gene
    - NPARAM: Number of relevant parameters used in the model
    - N: Sample size
-   - ZSTAT: Z- value derived from P- value
-   - P: Gene P-value 
-   - FB: Denotes fetal brain Hi-C data
-   - AB: Denotes adult brain Hi-C data
+   - ZSTAT: Z-scores derived from P-values
+   - P: Gene level P-values 
 
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs.
-   -  RRHO <Ranked gene list 1>, <Ranked gene list 2> : Ordered Z-scores from disease 1, ordered Z-scores from disease 2
-   -  outputdir= <output directory> : Output file name and directory
-   - alternative="enrichment" : One sided test 
-   -  BY=TRUE, log10.ind=TRUE : P-value plotted in -log10
+   -  Ranked gene list : Ordered Z-scores from a disease
+   -  alternative="enrichment" : One sided test 
+   -  BY=TRUE : P-value corrected by the Benjamini and Yekutieli procedure
+   -  log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
 * This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes for each comparison. 
-   - outputdir = "~/output/"> : Output file name and directory
-   - sharedlist = c("files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
-               "files/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
-               "files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
-               "files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
-               "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
-               "files/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
-               "files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv"): Input files from RRHO most upregulated genes 
+   - sharedlist : Most upregulated genes from RRHO. This list gives significantly associated genes in both disorders.
                
-   - sharedgene = c(): Creating shared genes
-   -  for (i in 1:(length(sharedlist)-1)){
-          for (j in (i+1):length(sharedlist)){
-        dis1 = unlist(read.csv(sharedlist[i], header=F))
-        dis2 = unlist(read.csv(sharedlist[j], header=F))
-        sharedgene = unique(c(sharedgene, intersect(dis1, dis2)))
-        print(paste(sharedlist[i],sharedlist[j]))
-    } : Comparing input files to generate pleiotropy genes
-  - save(sharedlist, file="pleiotropygenes.rda") = Save pleiotropy genes
-   
-   
-
 ## Reference
 Please cite this paper: Sey et al., 2019 bioRxiv (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
 
