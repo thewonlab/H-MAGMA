@@ -60,8 +60,8 @@ Output files from H_MAGMA.sh for Neuropsychiatric (ADHD; ASD; BD; SCZ; MDD) and 
    - outputdir = "~/output/"> : Output file name and directory
    - sharedlist = c("files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
                "~/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
-               "files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
-               "files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
+               "~/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv,
+               "~/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
                "files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
                "files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
                "files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
