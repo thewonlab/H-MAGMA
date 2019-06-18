@@ -36,17 +36,17 @@ Nancy Sey and Hyejung Won, 06/14/2019
 ## H_MAGMA_output.xlsx 
 Output files from H_MAGMA.sh for Neuropsychiatric (ADHD,ASD,BD,SCZ,MDD) and Neurodegenerative (AD,MS,PD,ALS) disorders  are provided in this repository as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz; Neuropsyc_H_MAGMA_Output.FB.xlsx.gz;Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz;Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz
 * MAGMA
-- GENE: Gene ID
-- CHR: Chromosomal location
-- START: Chromosomal start location of gene
-- STOP: Chromosomal stop location of gene
-- NSNPS: Number of SNPS annotated to gene
-- NPARAM: Number of relevant parameters used in the model
-- N: Sample size
-- ZSTAT: Z- value derived from P- value
-- P: Gene P-value 
-- FB: Denotes fetal brain Hi-C data
-- AB: Denotes adult brain Hi-C data
+   - GENE: Gene ID
+   - CHR: Chromosomal location
+   - START: Chromosomal start location of gene
+   - STOP: Chromosomal stop location of gene
+   - NSNPS: Number of SNPS annotated to gene
+   - NPARAM: Number of relevant parameters used in the model
+   - N: Sample size
+   - ZSTAT: Z- value derived from P- value
+   - P: Gene P-value 
+   - FB: Denotes fetal brain Hi-C data
+   - AB: Denotes adult brain Hi-C data
 
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs.
