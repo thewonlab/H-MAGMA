@@ -48,14 +48,17 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - P: Gene level P-values 
 
 ## RRHO.R
-* This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. We provide an example in this repository using fetal brain Hi-C MAGMA outputs for ADHD and ASD. Input files are provided as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
-   -  Ranked gene list : Ordered Z-scores from a disease
+* This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
+* Here we provide an example code using fetal brain Hi-C MAGMA outputs for ADHD and ASD. 
+* Input files are provided as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
+   -  Ranked gene list : Ordered Z-scores from a disease ##??
    -  alternative="enrichment" : One sided test 
    -  BY=TRUE : P-value corrected by the Benjamini and Yekutieli procedure
    -  log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
-* This file is to identify a set of genes shared among at least 3 disorders.To use this file, first run RRHO between pairs of disorders(e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD)  to obtain most upregulated genes for each comparison. 
+* This file is to identify a set of genes shared among at least 3 disorders. 
+* To use this file, first run RRHO between pairs of disorders (e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD) to obtain most upregulated genes for each comparison. Then intersect gene lists to obtain pleiotropic genes (defined as genes shared in >3 disorder). 
    - sharedlist : Most upregulated genes from RRHO. This list gives significantly associated genes in both disorders.
                
 ## Reference
