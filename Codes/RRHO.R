@@ -12,6 +12,8 @@ convert <- function(x){
     
     return(x)
 }
+ADHD_convert = convert(ADHD)
+ASD_convert = convert(ASD)
 
 RRHO.example = RRHO(ADHD,ASD, outputdir= "~/output/", alternative="enrichment",labels=c("ADHD", "ASD"), BY=TRUE, log10.ind=TRUE, plot=TRUE)
 hypermat = apply(t(RRHO.example[[4]]),1,rev)
