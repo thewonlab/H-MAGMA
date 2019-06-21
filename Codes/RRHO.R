@@ -9,7 +9,6 @@ convert <- function(x){
     # x is the name of the disorder
     x = x[,c("GENE","P")];
     x$P = -log10(x$P)
-    x = x[order(x$P),]
     
     return(x)
 }
