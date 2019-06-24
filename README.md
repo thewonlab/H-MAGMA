@@ -51,7 +51,6 @@ Nancy Sey and Hyejung Won, 06/14/2019
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
 * Here we provide an example code using fetal brain Hi-C MAGMA outputs for ADHD and ASD. 
 * Input files are provided as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
-   -  Ranked gene list : Ordered Z-scores from a disease ##??
    -  alternative="enrichment" : One sided test 
    -  BY=TRUE : P-value corrected by the Benjamini and Yekutieli procedure
    -  log10.ind=TRUE : P-value plotted in -log10
