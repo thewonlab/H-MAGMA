@@ -51,7 +51,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 ## GeneOntology.R
 * This script runs gene ontology analysis. 
-* We run gene ontology analysis for H-MAGMA, cMAGMA, Neuronal H-MAGMA for psychiatric disorders (ADHD;ASD;BD;MDD;SCZ), and Astrocyte H-MAGMA for degenerative disorders (AD;ALS;MS;PD). 
+* We run gene ontology analysis for H-MAGMA, cMAGMA, Neuronal H-MAGMA for psychiatric disorders (ADHD;ASD;BD;MDD;SCZ), and Astrocytic H-MAGMA for degenerative disorders (AD;ALS;MS;PD). 
    - Ranked gene list : We selected for protein-coding genes in MAGMA output files.Genes were then ranked based on Zscores. 
    - custom_bg : Background gene set were all other other genes not included in ranked gene list. 
    
@@ -59,7 +59,7 @@ Nancy Sey and Hyejung Won, 06/14/2019
 ## Gene ontology output files 
 * Output files from GeneOntology.R for H-MAGMA are provided as Supplementary table 6.xlsx
 * Output files from GeneOntology.R for cMAGMA are provided as Supplementary table 7.xlsx
-* Output files from GeneOntology.R for Neuron and Astrocyte H-MAGMA are provided as Supplementary table 9.xlsx 
+* Output files from GeneOntology.R for Neuronal and Astrocytic H-MAGMA are provided as Supplementary table 9.xlsx 
    
    
 ## RRHO.R
