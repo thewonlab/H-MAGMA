@@ -48,6 +48,19 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - ZSTAT: Z-scores derived from P-values
    - P: Gene level P-values 
 
+
+## GeneOntology.R
+* This script runs gene ontology analysis. 
+   - Ranked gene list : We selected for protein-coding genes in MAGMA output files.
+   - custom_bg : Background gene set were all other other genes not included in ranked gene list. 
+   
+   
+## Gene ontology output files 
+* Output files from GeneOntology.R for H-MAGMA are provided as Supplementary table 6.xlsx
+* Output files from GeneOntology.R for cMAGMA are provided as Supplementary table 7.xlsx
+* Output files from GeneOntology.R for Neuron and Astrocyte H-MAGMA are provided as Supplementary table 9.xlsx 
+   
+   
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
 * Here we provide an example code using fetal brain Hi-C MAGMA outputs for ADHD and ASD. 
