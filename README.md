@@ -33,9 +33,10 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - Amyotrophic lateral sclerosis (ALS): van Rheenen, W. et al.(2016) PMID: 27455348
 
 
-## H_MAGMA_output.xlsx 
-* Output files from H_MAGMA.sh for Neuropsychiatric disorders(ADHD; ASD; BD; SCZ; MDD) are provided as Neuropsyc_H-MAGMA_Output.AB.xlsx.gz and Neuropsyc_H_MAGMA_Output.FB.xlsx.gz based on adult brain Hi-C and fetal brain Hi-C, respectively.
-* Output files from H_MAGMA.sh for Neurodegenerative disorders (AD; MS; PD; ALS) are provided as Neurodegenerative_H-MAGMA_Output.AB.xlsx.gz and Neurodegenerative_H-MAGMA_Output.FB.xlsx.gz based on adult brain Hi-C and fetal brain Hi-C, respectively.
+## MAGMA output files 
+* Output files from H_MAGMA.sh are provided as Supplementary table 1.xlsx.
+* Output files from cMAGMA.sh are provided as Supplementary table 2.xlsx.
+* Output files from Neuro.sh and Astro.sh are provided as Supplementary table 8.xlsx.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
