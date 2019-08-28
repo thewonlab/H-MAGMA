@@ -1,5 +1,0 @@
-library(gProfileR)
-
-gprofiler(<Ranked gene list>, organism="hsapiens", ordered_query=T, significant=T, max_p_value=0.05, min_set_size=15, 
-max_set_size=600, min_isect_size=5, correction_method="fdr", hier_filtering="moderate", custom_bg=background gene set,
-include_graph=T, src_filter="GO")
