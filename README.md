@@ -58,9 +58,10 @@ Nancy Sey and Hyejung Won, 06/14/2019
    -  log10.ind=TRUE : P-value plotted in -log10
 
 ## Pleiotropic_genes.R
-* This file is to identify a set of genes shared among at least 3 disorders. 
+* This file is to identify a set of genes shared among at least 4 disorders. 
 * To use this file, first run RRHO between pairs of disorders (e.g. ADHD vs ASD/BD/SCZ/MDD; ASD vs BD/SCZ/MDD; BD vs SCZ/MDD; SCZ vs MDD) to obtain most upregulated genes for each comparison. Then intersect gene lists to obtain pleiotropic genes (defined as genes shared in >3 disorder). 
    - sharedlist : Most upregulated genes from RRHO. This list gives significantly associated genes in both disorders.
+   - HGNC : We have provided geneAnno_allgenes.rda as an input file to convert ENSEMBL gene IDs to HGNC symbols. 
                
 ## Reference
 Please cite this paper: Sey et al., 2019 bioRxiv (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
