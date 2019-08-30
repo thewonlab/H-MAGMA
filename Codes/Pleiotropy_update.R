@@ -1,18 +1,18 @@
 options(stringsAsFactors = F)
-load("/proj/hyejunglab/chr/geneAnno_allgenes.rda")
-outputdir = "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/"
+load("~/files/geneAnno_allgenes.rda")
+outputdir = "~/output/"
 
-sharedlist = c("/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
-               "/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv")
-discomb = unlist(lapply(strsplit(sharedlist,split="/"),'[[',8))
+sharedlist = c("~/files/RRHO_GO_MostUpregulatedADHD_VS_ASD.csv",
+               "~/files/RRHO_GO_MostUpregulatedADHD_VS_Bipolar.csv",
+               "~/files/RRHO_GO_MostUpregulatedADHD_VS_Schizophrenia.csv",
+               "~/files/RRHO_GO_MostUpregulatedADHD_VS_MDD.csv",
+               "~/files/RRHO_GO_MostUpregulatedASD_VS_Bipolar.csv",
+               "~/files/RRHO_GO_MostUpregulatedASD_VS_Schizophrenia.csv",
+               "~/files/RRHO_GO_MostUpregulatedASD_VS_MDD.csv",
+               "~/files/RRHO_GO_MostUpregulatedBipolar_VS_Schizophrenia.csv",
+               "~/files/RRHO_GO_MostUpregulatedBipolar_VS_MDD.csv",
+               "~/files/RRHO_GO_MostUpregulatedSchizophrenia_VS_MDD.csv")
+discomb = unlist(lapply(strsplit(sharedlist,split="/"),'[[',3))
 discomb = gsub("RRHO_GO_MostUpregulated","",discomb)
 discomb = gsub(".csv","",discomb)
 discomb = gsub("_VS_","|",discomb)
@@ -44,4 +44,4 @@ colnames(pleiotropicgenes) = c("ENSGID","Disorders")
 pleiotropicgenes$Disorders = unlist(pleiotropicgenes$Disorders)
 pleiotropicgenes$HGNC = geneAnno1[match(pleiotropicgenes$ENSGID,geneAnno1$ensembl_gene_id),"hgnc_symbol"]
 pleiotropicgenes = data.frame(pleiotropicgenes)
-write.csv(pleiotropicgenes, file="/proj/hyejunglab/crossdisorder/MAGMA/RRHO/Neuro/pleiotropic_genes.csv")
+write.csv(pleiotropicgenes, file="~/output/pleiotropic_genes.csv")
