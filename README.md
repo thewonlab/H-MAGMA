@@ -36,9 +36,9 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA.sh are provided as H-MAGMA_output.xlsx.
+* Output files from H_MAGMA.sh are provided as H-MAGMA_FB_AB_output.xlsx.
 * Output files from cMAGMA.sh are provided as cMAGMA_output.xlsx.
-* Output files from Neuro.sh and Astro.sh are provided as CellType_H-MAGMA_output.xlsx.
+* Output files from Neuro.sh and Astro.sh are provided as H-MAGMA_Neuron_Astro_output.xlsx.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
