@@ -8,15 +8,15 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository as    FB_wointron.genes.annot).
-   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as AB_wointron.genes.annot.).
-   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository as Neuro_wointron.genes.annot.).
-  - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository as Astro_wointron.genes.annot.).
+   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as FB_wointron.genes.annot).
+   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as AB_wointron.genes.annot.).
+   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro_wointron.genes.annot.).
+  - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro_wointron.genes.annot.).
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
 * GWAS Reference
-   - Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444	
+   - Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444
 
    - Autism spectrum disorder (ASD): Grove, J. et al.(2019) PMID: 31116379 
 
@@ -36,9 +36,9 @@ Nancy Sey and Hyejung Won, 06/14/2019
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA.sh are provided as H-MAGMA_FB_AB_output.xlsx.
-* Output files from cMAGMA.sh are provided as cMAGMA_output.xlsx.
-* Output files from Neuro.sh and Astro.sh are provided as H-MAGMA_Neuron_Astro_output.xlsx.
+* Output files from H_MAGMA.sh are provided in Output_Files folder as H-MAGMA_FB_AB_output.xlsx.
+* Output files from cMAGMA.sh are provided in Output_Files folder as cMAGMA_output.xlsx.
+* Output files from Neuro.sh and Astro.sh are provided in Output_Files folder as H-MAGMA_Neuron_Astro_output.xlsx.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
