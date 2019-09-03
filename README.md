@@ -10,8 +10,8 @@ Nancy Sey and Hyejung Won, 06/14/2019
    - ncol=N: use N column in GWAS summary statistics for the sample size
    - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository as    FB_wointron.genes.annot).
    - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as AB_wointron.genes.annot.).
-   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as Neuro_wointron.genes.annot.).
-  - --gene-annot Astro.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as Astro_wointron.genes.annot.).
+   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository as Neuro_wointron.genes.annot.).
+  - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository as Astro_wointron.genes.annot.).
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
