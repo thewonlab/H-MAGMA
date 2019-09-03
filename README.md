@@ -72,6 +72,7 @@ Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and 
 
 Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
 
+iPSC derived neurons and astrocyte : Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science (80-. ). Accepted f, eaat4311 (2018).
 
 
 
