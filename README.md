@@ -2,14 +2,16 @@
 Nancy Sey and Hyejung Won, 06/14/2019
 
 ## H_MAGMA.sh
-* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA
+* This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
    - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA v1.07b (https://ctg.cncr.nl/software/magma)]
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository as    FB.genes.annot.gz).
-   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as AB.genes.annot.gz).
+   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository as    FB_wointron.genes.annot).
+   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as AB_wointron.genes.annot.).
+   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as Neuro_wointron.genes.annot.).
+  - --gene-annot Astro.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository as Astro_wointron.genes.annot.).
    - --out disorder1_FB: output file name
 
 ## GWAS summary statistics
