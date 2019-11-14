@@ -1,5 +1,7 @@
 # H-MAGMA
-Nancy Sey and Hyejung Won, 06/14/2019
+Authors: Nancy Sey and Hyejung Won
+Created: 06/14/2019
+Updated: 11/14/2019
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
