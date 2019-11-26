@@ -1,7 +1,7 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019
-Updated: 11/14/2019
+Updated: 11/26/2019
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
@@ -10,10 +10,10 @@ Updated: 11/14/2019
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot FB.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as FB_wointron.genes.annot).
-   - --gene-annot AB.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as AB_wointron.genes.annot).
-   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro_wointron.genes.annot).
-    - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro_wointron.genes.annot).
+   - --gene-annot Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot).
+   - --gene-annot Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as Adult_brain.genes.annot).
+   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro.genes.annot).
+    - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro.genes.annot).
    - --gene-annot MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
    - --out disorder1_FB: output file name
 
@@ -39,9 +39,8 @@ Updated: 11/14/2019
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA.sh are provided in Output_Files folder as H-MAGMA_FB_AB_output.xlsx.
-* Output files from cMAGMA.sh are provided in Output_Files folder as cMAGMA_output.xlsx.
-* Output files from Neuro.sh and Astro.sh are provided in Output_Files folder as H-MAGMA_Neuron_Astro_output.xlsx.
+* Output files from H_MAGMA.sh are provided in Output_Files folder as H-MAGMA_Fetal_brain_output.xlsx.; H-MAGMA_Adult_brain_output.xlsx.; H-MAGMA_Neuron_output.xlsx.; H-MAGMA_Astrocyte_output.xlsx.
+* Output files from MAGMAdefault.sh are provided in Output_Files folder as MAGMAdefault_output.xlsx.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
@@ -57,7 +56,7 @@ Updated: 11/14/2019
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
 * Here we provide an example code using fetal brain Hi-C MAGMA outputs for ADHD and ASD. 
-* Input files are provided as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
+* Input files are provided in RRHO_example_input folder as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
    -  alternative="enrichment" : One sided test 
    -  BY=TRUE : P-value corrected by the Benjamini and Yekutieli procedure
    -  log10.ind=TRUE : P-value plotted in -log10
@@ -69,14 +68,12 @@ Updated: 11/14/2019
    - HGNC : We have provided geneAnno_allgenes.rda as an input file to convert ENSEMBL gene IDs to HGNC symbols. 
                
 ## Reference
-Please cite this paper: Sey et al., 2019 bioRxiv (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
+Please cite this paper: Sey et al., 2019 bioRxiv, doi: https://doi.org/10.1101/681353 (Connecting gene regulatory relationships to neurobiological mechanisms of brain disorders) -> check Methods when we said we put something in the repository. 
 
-Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018)
+Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
 
 Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
 
-iPSC derived neurons and astrocyte : Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science (80-. ). Accepted f, eaat4311 (2018).
-
-
+iPSC derived neurons and astrocyte : Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
 
 
