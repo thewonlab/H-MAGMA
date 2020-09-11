@@ -1,7 +1,7 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019
-Updated: 11/26/2019
+Updated: 09/11/2020
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
@@ -41,6 +41,7 @@ Updated: 11/26/2019
 ## MAGMA output files 
 * Output files from H_MAGMA.sh are provided in Output_Files folder as H-MAGMA_Fetal_brain_output.xlsx.; H-MAGMA_Adult_brain_output.xlsx.; H-MAGMA_Neuron_output.xlsx.; H-MAGMA_Astrocyte_output.xlsx.
 * Output files from MAGMAdefault.sh are provided in Output_Files folder as MAGMAdefault_output.xlsx.
+* Output files from H_MAGMAv.108 are provided in Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
