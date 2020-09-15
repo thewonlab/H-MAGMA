@@ -40,7 +40,7 @@ Updated: 09/15/2020
 
 ## MAGMA output files 
 * Output files from H_MAGMA.sh using H-MAGMAv1.07 are provided in subfolder H-MAGMAv1.07 under Output_Files folder as H-MAGMAv1.07_Fetal_brain_output.xlsx.; H-MAGMAv1.07_Adult_brain_output.xlsx.; H-MAGMAv1.07_Neuron_output.xlsx.; H-MAGMAv1.07_Astrocyte_output.xlsx.
-*Output files from H_MAGMA.sh using H-MAGMAv1.08 are provided in subfolder H-MAGMAv1.08 under Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
+* Output files from H_MAGMA.sh using H-MAGMAv1.08 are provided in subfolder H-MAGMAv1.08 under Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
 * Output files from MAGMAdefault.sh are provided in Output_Files folder as MAGMAdefault_output.xlsx.
 * Columns
    - GENE: Gene ID
