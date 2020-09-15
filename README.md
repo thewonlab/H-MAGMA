@@ -1,7 +1,7 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019
-Updated: 09/11/2020
+Updated: 09/15/2020
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
@@ -39,10 +39,9 @@ Updated: 09/11/2020
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA.sh are provided in Output_Files folder as H-MAGMA_Fetal_brain_output.xlsx.; H-MAGMA_Adult_brain_output.xlsx.; H-MAGMA_Neuron_output.xlsx.; H-MAGMA_Astrocyte_output.xlsx.
+* Output files from H_MAGMA.sh using H-MAGMAv1.07 are provided in subfolder H-MAGMAv1.07 under Output_Files folder as H-MAGMAv1.07_Fetal_brain_output.xlsx.; H-MAGMAv1.07_Adult_brain_output.xlsx.; H-MAGMAv1.07_Neuron_output.xlsx.; H-MAGMAv1.07_Astrocyte_output.xlsx.
+*Output files from H_MAGMA.sh using H-MAGMAv1.08 are provided in subfolder H-MAGMAv1.08 under Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
 * Output files from MAGMAdefault.sh are provided in Output_Files folder as MAGMAdefault_output.xlsx.
-* Output files from Neuronal and Glial H-MAGMA (Hu et al. 2020) are provided as H-MAGMA_AD_NeuN-_output.xlsx; H-MAGMA_BD_GABA_output.xlsx; H-MAGMA_BD_Glu_output.xlsx; H-MAGMA_SCZ_GABA_output.xlsx; H-MAGMA_SCZ_Glu_output.xlsx
-* Output files from H_MAGMAv.108 are provided in Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
@@ -78,6 +77,4 @@ Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory r
 
 iPSC derived neurons and astrocyte : Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
 
-Neuronal and glial 3D chromatin: Benxia Hu. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders bioRxiv 2020.05.14.096917; doi: https://doi.org/10.1101/2020.05.14.096917
-
-
+MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
