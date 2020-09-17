@@ -5,7 +5,7 @@ Updated: 09/15/2020
 
 ## H_MAGMA.sh
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
-   - magma/1.07b/bin/magma: We used MAGMA version 1.07b, downloaded from [MAGMA v1.07b (https://ctg.cncr.nl/software/magma)]
+   - magma/1.07b/bin/magma: We used MAGMA version 1.07b to ran H-MAGMAv1.07 and MAGMA version 1.08b for H-MAGMAv1.08. Both versions of MAGMA can be downloaded from (https://ctg.cncr.nl/software/magma)
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
