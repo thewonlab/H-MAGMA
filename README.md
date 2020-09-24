@@ -4,7 +4,7 @@ Created: 06/14/2019
 Updated: 09/15/2020 
 
 ## H_MAGMA.sh
-* We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
+* We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the potential type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
    - magma/1.07b/bin/magma: using MAGMA version 1.07b 
    - magma/1.08/bin/magma: using MAGMA version 1.08
