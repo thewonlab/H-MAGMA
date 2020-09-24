@@ -1,11 +1,13 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
-Created: 06/14/2019
-Updated: 09/15/2020
+Created: 06/14/2019 
+Updated: 09/15/2020 
 
 ## H_MAGMA.sh
+* We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
 * This file is to run Hi-C coupled MAGMA or H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA for fetal brain, adult brain and iPSC derived neurons and astrocyte.
-   - magma/1.07b/bin/magma: We used MAGMA version 1.07b to ran H-MAGMAv1.07 and MAGMA version 1.08b for H-MAGMAv1.08. Both versions of MAGMA can be downloaded from (https://ctg.cncr.nl/software/magma)
+   - magma/1.07b/bin/magma: using MAGMA version 1.07b 
+   - magma/1.08/bin/magma: using MAGMA version 1.08
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
@@ -13,7 +15,7 @@ Updated: 09/15/2020
    - --gene-annot Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot).
    - --gene-annot Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as Adult_brain.genes.annot).
    - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro.genes.annot).
-    - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro.genes.annot).
+   - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro.genes.annot).
    - --gene-annot MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
    - --out disorder1_FB: output file name
 
@@ -39,9 +41,9 @@ Updated: 09/15/2020
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA.sh using H-MAGMAv1.07 are provided in subfolder H-MAGMAv1.07 under Output_Files folder as H-MAGMAv1.07_Fetal_brain_output.xlsx.; H-MAGMAv1.07_Adult_brain_output.xlsx.; H-MAGMAv1.07_Neuron_output.xlsx.; H-MAGMAv1.07_Astrocyte_output.xlsx.
-* Output files from H_MAGMA.sh using H-MAGMAv1.08 are provided in subfolder H-MAGMAv1.08 under Output_Files folder as H-MAGMAv1.08_Fetal_brain_output.xlsx; H-MAGMAv1.08_Adult_brain_output.xlsx
-* Output files from MAGMAdefault.sh are provided in Output_Files folder as MAGMAdefault_output.xlsx.
+* Output files from H_MAGMA_v1.07.sh are provided in Output_Files/H-MAGMAv1.07.
+* Output files from H_MAGMA_v1.08.sh are provided in Output_Files/H-MAGMAv1.08.
+* Output files from MAGMAdefault_v1.07.sh are provided in Output_Files/MAGMAdefault.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
@@ -52,7 +54,6 @@ Updated: 09/15/2020
    - N: Sample size
    - ZSTAT: Z-scores derived from P-values
    - P: Gene level P-values 
-   
    
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
@@ -71,10 +72,12 @@ Updated: 09/15/2020
 ## Reference
 Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool (H-MAGMA) for improved prediction of brain-disorder risk genes by incorporating brain chromatin interaction profiles. Nat Neurosci (2020). https://doi.org/10.1038/s41593-020-0603-0
 
-Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
+* MAGMA
+   - MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
+   - MAGMA update: de Leeuw, C. A., Sey, N.Y.A., Posthuma, D., Won, H. A response to Yurko et al: H-MAGMA, inheriting a shaky statistical foundation, yields excess false positives. bioRxiv (2020).
 
-Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
+* Hi-C
+   - Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
+   - Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
+   - iPSC derived neurons and astrocytes: Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
 
-iPSC derived neurons and astrocyte : Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
-
-MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
