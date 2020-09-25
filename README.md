@@ -41,9 +41,9 @@ Updated: 09/15/2020
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA_v1.07.sh are provided in Output_Files/H-MAGMAv1.07.
-* Output files from H_MAGMA_v1.08.sh are provided in Output_Files/H-MAGMAv1.08.
-* Output files from MAGMAdefault_v1.07.sh are provided in Output_Files/MAGMAdefault.
+* Output files from H_MAGMA_v1.07.sh are provided in Output_Files/H-MAGMA_v1.07.
+* Output files from H_MAGMA_v1.08.sh are provided in Output_Files/H-MAGMA_v1.08.
+* Output files from MAGMAdefault_v1.07.sh are provided in Output_Files/MAGMA_v.1.07_default.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
