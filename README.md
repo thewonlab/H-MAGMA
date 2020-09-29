@@ -74,7 +74,7 @@ Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool
 
 * MAGMA
    - MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
-   - MAGMA update: de Leeuw, C. A., Sey, N.Y.A., Posthuma, D., Won, H. A response to Yurko et al: H-MAGMA, inheriting a shaky statistical foundation, yields excess false positives. bioRxiv (2020).
+   - MAGMA update: de Leeuw, C. A., Sey, N.Y.A., Posthuma, D., Won, H. A response to Yurko et al: H-MAGMA, inheriting a shaky statistical foundation, yields excess false positives. bioRxiv (2020) doi 10.1101/2020.09.25.310722.
 
 * Hi-C
    - Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
