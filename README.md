@@ -24,14 +24,6 @@ Updated: 02/04/2021
    - Midbrain_DA.genes.annot: gene-SNP pairs based on the midbrain dopaminergic Hi-C (provided in this repository in the Input_Files folder as Midbrain_DA.genes.annot)
    - MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
    
-   
-   Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot).
-   - --gene-annot Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as Adult_brain.genes.annot).
-   - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro.genes.annot).
-   - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro.genes.annot).
-   - --gene-annot MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
-
-
 ## GWAS summary statistics
 * GWAS Reference
    - Attention deficit/hyperactivity disorder (ADHD): Demontis, D. et al.(2019) PMID:30478444
