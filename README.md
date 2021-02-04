@@ -15,13 +15,13 @@ Updated: 02/04/2021
    - --gene-annot: Use gene-SNP pair annotation files from the Input_Files folder using the relevant tissue/cell type Hi-C data 
    - --out disorder1_FB: output file name
    
-* Description of annotation files (files are provided in this repository under the Input_Files folder)
-   - Fetal_brain.genes.annot: Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C. Fetal paracentral cortex was used.
-   - Adult_brain.genes.annot: Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C. Adult dorsolateral prefrontal cortex was used.
-   - IPSC_derived_neuro.genes.annot: PSC_derived_neuro.genes.annot: gene-SNP pairs based on the iPSC-derived neuron Hi-C
-   - IPSC_derived_astro.genes.annot:  IPSC_derived_astro.genes.annot: gene-SNP pairs based on the iPSC-derived astrocyte Hi-C
-   - Cortical_Neuron.genes.annot: Cortical_Neuron.genes.annot: gene-SNP pairs based on the cortical neuronal Hi-C. Neurons were sorted from the adult dorsolateral prefrontal cortex.
-   - Midbrain_DA.genes.annot: gene-SNP pairs based on the midbrain dopaminergic Hi-C -> Midbrain_DA.genes.annot: gene-SNP pairs based on the adult midbrain dopaminergic Hi-C.
+* Description of annotation files (files are provided in this repository under the _Input_Files_ folder)
+   - Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C. Fetal paracentral cortex was used.
+   - Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C. Adult dorsolateral prefrontal cortex was used.
+   - IPSC_derived_neuro.genes.annot: gene-SNP pairs based on the iPSC-derived neuron Hi-C
+   - IPSC_derived_astro.genes.annot: gene-SNP pairs based on the iPSC-derived astrocyte Hi-C
+   - Cortical_Neuron.genes.annot: gene-SNP pairs based on the cortical neuronal Hi-C. Neurons were sorted from the adult dorsolateral prefrontal cortex.
+   - Midbrain_DA.genes.annot: gene-SNP pairs based on the adult midbrain dopaminergic Hi-C.
    - MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
    
 ## GWAS summary statistics
