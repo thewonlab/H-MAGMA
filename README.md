@@ -94,5 +94,5 @@ Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool
    - Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
    - iPSC derived neurons and astrocytes: Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
    - Cortical neuron: Hu, B. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders. 2020.05.14.096917 (2020) doi:10.1101/2020.05.14.096917.
-   - Midbrain dopaminergic neuron: Sey, N.Y.A, Hu, B. et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
+   - Midbrain dopaminergic neuron: Sey, N.Y.A*, Hu, B*. et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
 
