@@ -9,20 +9,20 @@ Updated: 02/04/2021
    - magma/1.07b/bin/magma: using MAGMA version 1.07b 
    - magma/1.08/bin/magma: using MAGMA version 1.08
    - --bfiile g1000_eur: Reference file for European population, downloaded from [Reference data (https://ctg.cncr.nl/software/magma)]
-   - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see the GWAS summary statistics section below.
-   - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
+   - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see the GWAS summary statistics section below
+   - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot: Use gene-SNP pair annotation files from the Input_Files folder using the relevant tissue/cell type Hi-C data 
+   - --gene-annot: Fetal_brain.genes.annot. Use gene-SNP pair annotation files from the _Input_Files_ folder using the relevant tissue/cell type Hi-C data 
    - --out disorder1_FB: output file name
    
 * Description of annotation files (files are provided in this repository under the _Input_Files_ folder)
    - Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C. Fetal paracentral cortex was used.
    - Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C. Adult dorsolateral prefrontal cortex was used.
-   - IPSC_derived_neuro.genes.annot: gene-SNP pairs based on the iPSC-derived neuron Hi-C
-   - IPSC_derived_astro.genes.annot: gene-SNP pairs based on the iPSC-derived astrocyte Hi-C
+   - IPSC_derived_neuro.genes.annot: gene-SNP pairs based on the iPSC-derived neuron Hi-C.
+   - IPSC_derived_astro.genes.annot: gene-SNP pairs based on the iPSC-derived astrocyte Hi-C.
    - Cortical_Neuron.genes.annot: gene-SNP pairs based on the cortical neuronal Hi-C. Neurons were sorted from the adult dorsolateral prefrontal cortex.
    - Midbrain_DA.genes.annot: gene-SNP pairs based on the adult midbrain dopaminergic Hi-C.
-   - MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
+   - MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA.
    
 ## GWAS summary statistics
 * GWAS Reference
@@ -54,9 +54,9 @@ Updated: 02/04/2021
 
 
 ## MAGMA output files 
-* Output files from H_MAGMA_v1.07.sh are provided in Output_Files/H-MAGMA_v1.07.
-* Output files from H_MAGMA_v1.08.sh are provided in Output_Files/H-MAGMA_v1.08.
-* Output files from MAGMAdefault_v1.07.sh are provided in Output_Files/MAGMA_v.1.07_default.
+* Output files from H_MAGMA_v1.07.sh are provided in _Output_Files/H-MAGMA_v1.07_.
+* Output files from H_MAGMA_v1.08.sh are provided in _Output_Files/H-MAGMA_v1.08_.
+* Output files from MAGMAdefault_v1.07.sh are provided in _Output_Files/MAGMA_v.1.07_default_.
 * Columns
    - GENE: Gene ID
    - CHR: Chromosomal location
@@ -71,7 +71,7 @@ Updated: 02/04/2021
 ## RRHO.R
 * This script runs gene-level overlap between two disorders based on Z-scores from H-MAGMA outputs. 
 * Here we provide an example code using fetal brain Hi-C MAGMA outputs for ADHD and ASD. 
-* Input files are provided in RRHO_example_input folder as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
+* Input files are provided in _RRHO_example_input_ folder as H-MAGMA_ADHD.FB.csv and H-MAGMA_ASD.FB.csv respectively.
    -  alternative="enrichment" : One sided test 
    -  BY=TRUE : P-value corrected by the Benjamini and Yekutieli procedure
    -  log10.ind=TRUE : P-value plotted in -log10
