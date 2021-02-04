@@ -1,7 +1,7 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019 
-Updated: 09/15/2020 
+Updated: 02/04/2021 
 
 ## H_MAGMA.sh
 * We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the potential type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
@@ -12,12 +12,25 @@ Updated: 09/15/2020
    - --pval disorder1_GWAS.txt: P-values from GWAS summary statistics, see below. 
    - use=rsid,P: use rsid and P columns in GWAS summary statistics for SNP IDs and P-values, respectively.
    - ncol=N: use N column in GWAS summary statistics for the sample size
-   - --gene-annot Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot).
+   - --gene-annot: Use gene-SNP pair annotation files from the Input_Files folder using the relevant tissue/cell type Hi-C data 
+   - --out disorder1_FB: output file name
+   
+* Description of annotation files
+   - Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot)
+   - Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as Adult_brain.genes.annot)
+   - IPSC_derived_neuro.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as IPSC_derived_neuro.genes.annot)
+   - IPSC_derived_astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as IPSC_derived_astro.genes.annot).
+   - Cortical_Neuron.genes.annot: gene-SNP pairs based on the cortical Hi-C (provided in this repository in the Input_Files folder as Cortical_Neuron.genes.annot)
+   - Midbrain_DA.genes.annot: gene-SNP pairs based on the midbrain dopaminergic Hi-C (provided in this repository in the Input_Files folder as Midbrain_DA.genes.annot)
+   - MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
+   
+   
+   Fetal_brain.genes.annot: gene-SNP pairs based on the fetal brain Hi-C (provided in this repository in Input_Files folder as Fetal_brain.genes.annot).
    - --gene-annot Adult_brain.genes.annot: gene-SNP pairs based on the adult brain Hi-C (provided in this repository in Input_Files folder as Adult_brain.genes.annot).
    - --gene-annot Neuron.genes.annot: gene-SNP pairs based on the neuronal Hi-C (provided in this repository in Input_Files folder as Neuro.genes.annot).
    - --gene-annot Astro.genes.annot: gene-SNP pairs based on the astrocytic brain Hi-C (provided in this repository in Input_Files folder as Astro.genes.annot).
    - --gene-annot MAGMA.genes.annot: gene-SNP pairs based on conventional MAGMA (provided in this repository in Input_Files folder as MAGMAdefault.genes.annot.gz)
-   - --out disorder1_FB: output file name
+
 
 ## GWAS summary statistics
 * GWAS Reference
@@ -38,6 +51,14 @@ Updated: 09/15/2020
    - Multiple sclerosis (MS): Andlauer, T. F. M. et al.(2016) PMID: 27386562
 
    - Amyotrophic lateral sclerosis (ALS): van Rheenen, W. et al.(2016) PMID: 27455348
+   
+   - Problematic alcohol use (PAU): Zhou, H.  et al. (2020) PMID: 32451486
+   
+   - Drinks per week (DPW): Liu, M. et al. (2019) PMID: 30643251
+   
+   - Nicotine Dependence (ND): Quach, B.C. et al.(2020) PMID: 33144568
+   
+   - Cigarettes per day (CPD): Liu, M. et al. (2019) PMID: 30643251
 
 
 ## MAGMA output files 
@@ -80,4 +101,6 @@ Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool
    - Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
    - Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
    - iPSC derived neurons and astrocytes: Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
+   - Cortical neuron: Hu, B. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders. 2020.05.14.096917 (2020) doi:10.1101/2020.05.14.096917.
+   - Midbrain dopaminergic neuron: Sey, N.Y.A, Hu, B. et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
 
