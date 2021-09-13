@@ -1,9 +1,10 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019 
-Updated: 02/04/2021 
+Updated: 09/13/2021 
 
 ## H_MAGMA.sh
+* We have included the full protocol to generate the variant-gene annotation file needed to run H-MAGMA. Additionally, we have generated additional annotation files for 28 tissue and cell types using promoter-capture HiC data from Jung et al. 2019. You can access the materials following this link to Zenodo:  https://doi.org/10.5281/zenodo.5503877
 * We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the potential type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
 * The following files are required to run H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA using Hi-C driven annotation files.
    - magma/1.07b/bin/magma: using MAGMA version 1.07b 
@@ -90,9 +91,10 @@ Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool
    - MAGMA update: de Leeuw, C. A., Sey, N.Y.A., Posthuma, D., Won, H. A response to Yurko et al: H-MAGMA, inheriting a shaky statistical foundation, yields excess false positives. bioRxiv (2020) doi 10.1101/2020.09.25.310722.
 
 * Hi-C
+   - Promoter-capture Hi-C data from 28 tissues and cell types: Jung, I. et al. A compendium of promoter-centered long-range chromatin interactions in the human  genome. Nature Genetics vol. 51 1442–1449 (2019).
    - Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
    - Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
    - iPSC derived neurons and astrocytes: Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
    - Cortical neuron: Hu, B. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders. bioRxiv 2020.05.14.096917 (2020) doi:10.1101/2020.05.14.096917.
-   - Midbrain dopaminergic neuron: Sey, N.Y.A*, Hu, B*. et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
+   - Midbrain dopaminergic neuron: Sey, N.Y.A et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
 
