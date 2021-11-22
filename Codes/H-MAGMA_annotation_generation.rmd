@@ -1,0 +1,146 @@
+---
+title: "H-MAGMA"
+author: "Brandon M. Pratt and Nancy Y. A. Sey"
+date: "8/17/2021"
+output: html_document
+---
+
+## R Markdown
+
+This is an R Markdown document that describes how to generate H-MAGMA input files.
+
+```{r setup}
+options(stingAsFactors=F)
+library(GenomicRanges)
+library(biomaRt)
+library(dplyr)
+setwd("~/work/")
+```
+
+## Make GenomicRanges objects for exons and promoter
+We will use gene definitions from Gencode v26: https://www.gencodegenes.org/human/release_26lift37.html
+
+```{r generate granges objects from exons and promoters}
+exon <- read.table("Gencode26_exon.bed")
+exon$V1 <- sub("^", "chr", exon$V1)
+exonranges <- GRanges(exon[,1],IRanges(exon[,2],exon[,3]),gene=exon[,4])
+promoter <- read.table("Gencode26_promoter.bed")
+promoter$V1 <- sub("^", "chr", promoter$V1)
+promoterranges <- GRanges(promoter[,1], IRanges(promoter[,2], promoter[,3]), gene=promoter[,4])
+save(exonranges, promoterranges, file="exon_promoranges.rda")
+#load ("exon_promoranges.rda")
+```
+
+## Generate a GenomicRanges object for the SNP annotation
+
+Here, we will use SNP annotation from European ancestry (EUR.bim), which can be downloaded from: https://ctg.cncr.nl/software/magma
+
+```{r generate granges objects from SNPs}
+snps <- read.table("EUR.bim")
+snps <- snps[,c(1,2,4)]
+colnames(snps) <- c("chr","SNP","Position")
+snps$chr <- sub("^", "chr", snps$chr)
+snps <- GRanges(snps$chr, IRanges(snps$Position, snps$Position), rsid=snps$SNP)
+save(snps, file="snps.rda")
+#load ("snps.rda")
+```
+
+## Overlap exons with SNPs
+
+Now that the SNPs GenomicRanges object has been generated, we will overlap these SNPs with exons as defined by Gencode v26.
+
+```{r overlap exons with SNPs}
+olap <- findOverlaps(snps,exonranges);
+snpexon <- snps[queryHits(olap)];
+mcols(snpexon) <- cbind(mcols(snpexon), mcols(exonranges[subjectHits(olap)]))
+```
+
+## Overlap promoters with SNPs
+
+Now that the SNPs GenomicRanges object has been generated, we will overlap these SNPs with promotors as defined by Gencode v26.
+
+```{r overlap promoters with SNPs}
+olap <- findOverlaps(snps,promoterranges);
+snpro <- snps[queryHits(olap)];
+mcols(snpro) <- cbind(mcols(snpro), mcols(promoterranges[subjectHits(olap)]))
+
+snpexon <- snpexon[seqnames(snpexon)!="chrX"]
+snpro <- snpro[seqnames(snpro)!="chrX"]
+save(snpro, snpexon, file="snp_locating_in_exon_promoter_transcript_level.rda")
+
+#load("snp_locating_in_exon_promoter_transcript_level.rda")
+```
+
+## Assign SNPs to genes using Hi-C. 
+
+Using the remaining SNPs that did not fall within an exon or gene promotor, we will use Hi-C to annotate which genes interact with these SNPs.
+Here, we will use adult brain Hi-C data (http://resource.psychencode.org), but other Hi-C datasets can be used.
+
+```{r assign SNPs to genes using Hi-C}
+snpranges <- snps[!(snps$rsid %in% snpexon$rsid), ]
+snpranges <- snpranges[!(snpranges$rsid %in% snpro$rsid), ]
+save(snpranges,file="non_exonic_promoter_snp.rda")
+
+load("non_exonic_promoter_snp.rda") 
+load("exon_promoranges.rda")
+
+hic <- read.table("adultbrain_hic.bedpe",header = T)
+hicranges <- GRanges(hic$chrom1, IRanges(as.numeric(hic$start1), as.numeric(hic$end1)), int1=hic$start2,int2=hic$end2)
+
+olap <- findOverlaps(hicranges,exonranges);
+exonint <- hicranges[queryHits(olap)];
+mcols(exonint) <- cbind(mcols(hicranges[queryHits(olap)]), mcols(exonranges[subjectHits(olap)]))
+
+olap <- findOverlaps(hicranges,promoterranges);
+proint <- hicranges[queryHits(olap)];
+mcols(proint) <- cbind(mcols(hicranges[queryHits(olap)]), mcols(promoterranges[subjectHits(olap)]))
+
+generanges <- c(exonint, proint)
+genebed <- data.frame(chr=seqnames(generanges), snp.start=generanges$int1, snp.end=generanges$int2, 
+                      gene.start=start(generanges), gene.end=start(generanges)+width(generanges)-1, ensg=generanges$gene)
+
+genebed <- unique(genebed) 
+genesnpranges <- GRanges(genebed$chr, IRanges(genebed$snp.start, genebed$snp.end), ensg=genebed$ensg)
+
+olap <- findOverlaps(snpranges,genesnpranges)
+snpint <- snpranges[queryHits(olap)]
+mcols(snpint) <- cbind(mcols(snpranges[queryHits(olap)]), mcols(genesnpranges[subjectHits(olap)]))
+snpint <- unique(snpint)
+
+save(snpint, file="Hi-C_transcript_interacting_snp.rda")
+```
+
+## Generate a H-MAGMA variant-gene annotation file
+Combine all SNP annotation from the lists of exonic SNPs, promoter SNPs, and Hi-C annotated SNPs.
+Using this combined SNP-gene relationship, we will make an annotation file compatible with MAGMA.
+
+```{r generate H-MAGMA variant-gene annotation file}
+
+load("Hi-C_transcript_interacting_snp.rda")
+load("snp_locating_in_exon_promoter_transcript_level.rda")
+
+snpdat <- data.frame(chr=seqnames(snpint), bp=start(snpint), rsid=snpint$rsid, ensg=snpint$ensg)
+
+snpromat <- unique(data.frame(rsid=snpro$rsid, ensg=snpro$gene))
+snpexonmat <- unique(data.frame(rsid=snpexon$rsid, ensg=snpexon$gene))
+snpcomb <- unique(rbind(snpdat[,3:4], snpromat, snpexonmat)) 
+
+save(snpcomb, file="SNP_to_transcript_comb.rda")
+
+snpagg <- aggregate(snpcomb, list(snpcomb$ensg), unique)
+genedef <- read.table("Gencode26_gene.bed")
+colnames(genedef) <- c("chr", "start", "end", "ensg")
+genedef <- genedef[grep("chr", genedef$chr),]
+genedef$chr <- unlist(lapply(strsplit(genedef$chr, "chr"), '[[', 2))
+genedef$index <- paste(genedef$chr, genedef$start, genedef$end, sep=":")
+snpagg$index <- genedef[match(snpagg$ensg, genedef$ensg),"index"]
+
+snpagg <- snpagg[!is.na(snpagg$index),]
+snpaggconv <- snpagg[,c("ensg", "index", "rsid")]
+writable <- format(snpaggconv)
+
+write.table(writable, file="SNP_aggregate_transcript.txt", quote=F, row.names=F, col.names=F, sep="\t") # change the name of the file
+
+system("sed -e 's/, /\t/g' < SNP_aggregate_transcript.txt >","Adultbrain.transcript.annot")
+```
+
