@@ -4,7 +4,7 @@ Created: 06/14/2019
 Updated: 09/13/2021 
 
 ## H_MAGMA.sh
-* We have included the full protocol to generate the variant-gene annotation file needed to run H-MAGMA. Additionally, we have generated additional annotation files for 28 tissue and cell types using promoter-capture HiC data from Jung et al. 2019. You can access the materials following this link to Zenodo:  https://doi:10.5281/zenodo.5503876
+* We have included the full protocol to generate the variant-gene annotation file needed to run H-MAGMA. Additionally, we have generated additional annotation files for 28 tissue and cell types using promoter-capture HiC data from Jung et al. 2019. You can access the materials following this link to Zenodo:  https://doi.org/10.5281/zenodo.5503876
 * We updated the code and results using the updated version of MAGMA (MAGMA v.1.08) that better controls for the potential type I error rate inflation. Initial results were generated from MAGMA v.1.07b. Both versions of MAGMA can be downloaded from: https://ctg.cncr.nl/software/magma. 
 * The following files are required to run H-MAGMA to assign non-coding SNPs to cognate genes. Follow the detailed script below to run H-MAGMA using Hi-C driven annotation files.
    - magma/1.07b/bin/magma: using MAGMA version 1.07b 
