@@ -85,8 +85,8 @@ Updated: 06/15/2023
                
 ## Reference
 Please cite this paper: 
-Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool (H-MAGMA) for improved prediction of brain-disorder risk genes by incorporating brain chromatin interaction profiles. Nat Neurosci (2020). https://doi.org/10.1038/s41593-020-0603-0
-Sey, N.Y.A., Pratt, B.M., Won, H. Annotating genetic variants to target genes using H-MAGMA. Nat Protocols (2023). https://doi.org/10.1038/s41596-022-00745-z
+* Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool (H-MAGMA) for improved prediction of brain-disorder risk genes by incorporating brain chromatin interaction profiles. Nat Neurosci (2020). https://doi.org/10.1038/s41593-020-0603-0
+* Sey, N.Y.A., Pratt, B.M., Won, H. Annotating genetic variants to target genes using H-MAGMA. Nat Protocols (2023). https://doi.org/10.1038/s41596-022-00745-z
 
 * MAGMA
    - MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
