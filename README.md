@@ -1,7 +1,7 @@
 # H-MAGMA
 Authors: Nancy Sey and Hyejung Won
 Created: 06/14/2019 
-Updated: 09/13/2021 
+Updated: 06/15/2023
 
 ## H_MAGMA.sh
 * We have included the full protocol to generate the variant-gene annotation file needed to run H-MAGMA. Additionally, we have generated additional annotation files for 28 tissue and cell types using promoter-capture HiC data from Jung et al. 2019. You can access the materials following this link to Zenodo:  https://doi.org/10.5281/zenodo.5503876
@@ -84,7 +84,9 @@ Updated: 09/13/2021
    - HGNC : We have provided geneAnno_allgenes.rda as an input file to convert ENSEMBL gene IDs to HGNC symbols. 
                
 ## Reference
-Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool (H-MAGMA) for improved prediction of brain-disorder risk genes by incorporating brain chromatin interaction profiles. Nat Neurosci (2020). https://doi.org/10.1038/s41593-020-0603-0
+Please cite this paper: 
+Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool (H-MAGMA) for improved prediction of brain-disorder risk genes by incorporating brain chromatin interaction profiles. Nat Neurosci (2020). https://doi.org/10.1038/s41593-020-0603-0
+Sey, N.Y.A., Pratt, B.M., Won, H. Annotating genetic variants to target genes using H-MAGMA. Nat Protocols (2023). https://doi.org/10.1038/s41596-022-00745-z
 
 * MAGMA
    - MAGMA: de Leeuw, C. A., Mooij, J. M., Heskes, T. & Posthuma, D. MAGMA: generalized gene-set analysis of GWAS data. PLoS Comput. Biol. 11, e1004219 (2015).
@@ -95,6 +97,6 @@ Please cite this paper: Sey, N.Y.A., Hu, B., Mah, W. et al. A computational tool
    - Adult brain Hi-C: Wang, D. et al. Comprehensive functional genomic resource and integrative model for the human brain. Science 362, eaat8464 (2018).
    - Fetal brain Hi-C: Won, H. et al. Chromosome conformation elucidates regulatory relationships in developing human brain. Nature 538, 523–527 (2016).
    - iPSC derived neurons and astrocytes: Rajarajan, P. et al. Neuron-specific Signatures in the Chromosomal Connectome Are Associated with Schizophrenia Risk. Science 362, eaat4311 (2018).
-   - Cortical neuron: Hu, B. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders. bioRxiv 2020.05.14.096917 (2020) doi:10.1101/2020.05.14.096917.
-   - Midbrain dopaminergic neuron: Sey, N.Y.A et al. Chromatin architecture of cortical and midbrain dopaminergic neurons elucidate biological mechanisms underlying cigarette smoking and alcohol use traits. bioRxiv (2021)
+   - Cortical neuron: Hu, B. et al. Neuronal and glial 3D chromatin architecture illustrates cellular etiology of brain disorders. Nature Communications 12(1):3968 (2021).
+   - Midbrain dopaminergic neuron: Sey, N.Y.A et al. Chromatin architecture in addiction circuitry identifies risk genes and potential biological mechanisms underlying cigarette smoking and alcohol use traits. Molecular Psychiatry 27(7):3085-3094 (2022).
 
